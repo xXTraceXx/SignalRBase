@@ -1,0 +1,39 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@*<div class="text-center">
+        <h1 class="display-4">Welcome</h1>
+        <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    </div>*@
+
+<div class="modal-dialog__container" role="document">
+    <div id="cameraSelectionBx">
+        <label for="cam">Choose a camera:</label>
+        <select name="cam" id="cam"></select>
+    </div>
+    <p>Please complete this form to join</p>
+    <div>
+        <div id="camera">
+            <video autoplay playsinline muted id="video">Video stream not available</video>
+        </div>
+        <div id="imgOutput">
+            <img id="bgImg">
+            <canvas id="canvas" style="display: inherit"></canvas>
+        </div>
+        <div class="cameraBtns">
+            <div id="openGallery" class="icon-user">Gallery</div>
+            <button id="startbutton">Take photo</button>
+            <label id="pictureInputLabel" for="pictureInput" class="icon-upload">Choose file</label>
+            <input id="pictureInput" name="pictureInput" type="file" accept="image/*">
+        </div>
+    </div>
+    <div class="modal-dialog__footer">
+        <button id="resetBtn" class="button button" type="reset" style="margin-right:20px;">Cancel</button>
+        <button id="submitBtn" class="button button--primary" type="submit" style="width:152px;height:37px">Submit</button>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/site.js" asp-append-version="true"></script>
+}

@@ -1,0 +1,20 @@
+﻿<h1>Pictures</h1>
+<div id="pictureBox"></div>
+
+
+<script>
+    let baseStrings = @Html.Raw(Json.Serialize(@ViewBag.Pictures));
+    console.log(baseStrings);
+    const pictureBox = document.getElementById('pictureBox');
+
+    for (let i = 0; i < baseStrings.length; i++) {
+        //let newImage = `<img src="${baseStrings[i]}"></image><br><br>`;
+        //pictureBox.append(newImage);
+
+        let imageElement = document.createElement('img');
+        imageElement.setAttribute('src', baseStrings[i]);
+
+        pictureBox.appendChild(imageElement);
+    }
+
+</script>
