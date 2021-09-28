@@ -35,7 +35,10 @@ namespace SQL_Identity_SIgnalR_Base
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
+            services.AddRazorPages();
+
             services.AddSignalR();
+
 
             services.AddControllersWithViews();
         }
