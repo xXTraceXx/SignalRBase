@@ -1,10 +1,5 @@
-﻿$(() => {
-    const signalRConnection = new signalR.HubConnectionBuilder()
-        .withUrl("/ViewerHub")
-        .build();
+﻿import { signalRConnector } from './signalRConnector';
 
-    signalRConnection.start()
-        .then(() => console.log('signalR connected!'))
-        .catch((errorMsg) => console.error(errorMsg));
-})
+let signalRConnector = new SignalRConnector('/viewerHub');
+signalRConnector.connect();
 

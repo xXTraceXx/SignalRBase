@@ -24,6 +24,16 @@ namespace SQL_Identity_SIgnalR_Base.Controllers
             return View();
         }
 
+        public IActionResult Networking()
+        {
+            return View();
+        }
+
+        public IActionResult Plenum()
+        {
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();
